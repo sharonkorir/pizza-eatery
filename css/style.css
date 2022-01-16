@@ -6,29 +6,88 @@
  'three three three';
 }
 #one{
-  background-color: #b52032;
+  background-color: #eeb21d;
   grid-area: one;
   text-align: center;
-  padding: 50px;
-  
+  padding: 20px;
 }
 
 #two{
+  grid-area: two;
   background-image: url(/assets/order.jpg);
-  background-color: #e4bb23;
   background-size: cover;
   background-repeat: no-repeat;
-  grid-area: two;
-  height: 800px;
+  height: 700px;
+  color: #ebedef;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 16pt;
 }
+
 #three{
-  background-color: #a66c48;
+  background-color: #bfaf5e;
   grid-area: three;
   text-align: center;
-
 }
 
 .icon{
   width: 5%;
   padding: 10px;
+}
+.logo{
+  width: 10%;
+  padding: 5px;
+}
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.column{
+  width: 100%;
+}
+.btn{
+  background-color: #747c64;
+  border-color: #747c64;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 734px) {
+  .logo {
+    width: 25%;
+  }
+  .column{
+    width: 100%;
+  }
+  #two{
+    height: 400px;
+  }
+  h2{
+    font-size: 36px;
+  }
+  p{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .logo {
+    width: 25%;
+  }
+  .column{
+    width: 100%;
+  }
+  #two{
+    height: 450px;
+  }
+  .icon{
+    width: 10%;
+    padding: 10px;
+  }
+  #one{
+    max-height: 200px;
+  }
 }
