@@ -22,3 +22,8 @@ $(document).ready(function(){
     $(".box-showing").show()
   });
 });
+
+//business logic
+function submitForm (event){
+  
+}
