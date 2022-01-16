@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+
 .grid-container{
  display: grid;
  grid-template-areas:
@@ -23,7 +25,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 16pt;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  
 }
 
 #three{
@@ -47,14 +51,19 @@
 }
 .column{
   width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 .btn{
   background-color: #747c64;
   border-color: #747c64;
   margin: 20px;
   border-radius: 5px;
+  padding: 8px;
 }
-
+h2{
+  font-family: 'Fredoka One', cursive;
+  font-size: 60px;
+}
 @media screen and (max-width: 734px) {
   .logo {
     width: 25%;
@@ -69,7 +78,7 @@
     font-size: 36px;
   }
   p{
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
