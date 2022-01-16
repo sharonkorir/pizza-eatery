@@ -6,7 +6,7 @@ A website for Pizza Moto Eatery, created to widen the customer base. The website
 ## Author's information
 I am currently a software development student at Moringa School
 ## Setup/Installation Requirements
-* Click on the link https://github.com/sharonkorir/pizza-eatery
+* Click on the link https://sharonkorir.github.io/pizza-eatery/
 * Launch the application on your browser
 * Click on the 'order now' button to place your order
 ## Dependencies
