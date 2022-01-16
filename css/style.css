@@ -89,6 +89,13 @@ h2{
 #meat, #veg{
   text-align: start ;
 }
+footer{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+}
+.table{
+  text-align: start;
+}
 
 @media screen and (max-width: 734px) {
   .logo {
