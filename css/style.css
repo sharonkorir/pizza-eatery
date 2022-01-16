@@ -70,9 +70,17 @@ h2{
   padding: 10px;
   border-radius: 10px;
   align-items: center;
-  /*display: none;*/
+  display: none;
 }
 .box-hidden{
+  display: showing;
+}
+.ordertotal{
+  background-color:#bfaf5e; 
+  opacity: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
   display: none;
 }
 #toppings{
