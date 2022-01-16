@@ -6,11 +6,19 @@ $(document).ready(function(){
   $("#submit").click(function(){
     $(".box-showing").show();
   });
+  //show total
   $("#checkout").click(function(){
     $(".box-showing").hide();
   });
   $("#checkout").click(function(){
     $(".ordertotal").show()
+    event.preventDefault();
   });
-  event.preventDefault();
+  //add pizza
+  $("#add-order").click(function(){
+    $(".ordertotal").hide();
+  });
+  $("#add-order").click(function(){
+    $(".box-showing").show()
+  });
 });
