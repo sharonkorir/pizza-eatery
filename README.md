@@ -1,6 +1,6 @@
-Pizza Moto Website
+### Pizza Moto 
 ## Description
-A website for Pizza Mojo Eatery, created to widen the customer base. The website allows customers to order different sizes of pizza with the choice of one or more toppings. 16th January 2021
+A website for Pizza Moto Eatery, created to widen the customer base. The website allows customers to order different sizes of pizza with the choice of one or more toppings. 16th January 2021
 ## Author
 - [Sharon Korir](https://github.com/sharonkorir)
 ## Author's information
