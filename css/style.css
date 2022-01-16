@@ -1,0 +1,34 @@
+.grid-container{
+ display: grid;
+ grid-template-areas:
+ 'one one one'
+ 'two two two'
+ 'three three three';
+}
+#one{
+  background-color: #b52032;
+  grid-area: one;
+  text-align: center;
+  padding: 50px;
+  
+}
+
+#two{
+  background-image: url(/assets/order.jpg);
+  background-color: #e4bb23;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: two;
+  height: 800px;
+}
+#three{
+  background-color: #a66c48;
+  grid-area: three;
+  text-align: center;
+
+}
+
+.icon{
+  width: 5%;
+  padding: 10px;
+}
