@@ -8,10 +8,6 @@
   <link rel="icon" type="image/x-icon" href="assets/logo.png">
   <link rel="stylesheet" type="text/css"href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
   <div class="grid-container">
@@ -31,7 +27,7 @@
       </div>
     </div>
     <div id="two">
-      <div class="box">
+      <div class="box-hidden">
         <h3>PIZZA MOTO</h3>
         <hr>
         <h6>FROM OUR KITCHEN TO YOUR TABLE</h6>
@@ -39,16 +35,51 @@
           <input type="submit" class="btn btn-success" value="ORDER NOW" >
         </div>
      </div>
-      <!--<div class="container-sm">
+     <div class="box-showing">
         <form action="">
-          <input type="submit" value="Build your own pizza">
-          <select name="delivery" id="delivery">
-            <option value="delivery">Delivery</option>
-            <option value="pickup">Pick-up</option>
-          </select>
-          <input type="text" placeholder="estate/apartment">
+            <select name="size" class="form-control"id="size">
+              <option value="" disabled selected hidden>Choose a size:</option>
+              <option value="regular">regular</option>
+              <option value="medium">medium</option>
+              <option value="large">large</option>
+            </select>
+            <br>
+            <select name="crust" class="form-control"id="crust">
+              <option value="" disabled selected hidden>Choose a crust:</option>
+              <option value="thin">thin</option>
+              <option value="stuffed">stuffed</option>
+              <option value="glutten-free">glutten-free</option>
+            </select>
+            <br>
+            <label for="toppings" >Choose your toppings:</label><br>
+            <div id="toppings">
+              <div id="meat">Meat: <br>
+                <input type="checkbox" id="bacon" value="topping">
+                <label for="beef">bacon</label><br>
+                <input type="checkbox" id="chicken"  value="topping">
+                <label for="chicken">chicken</label><br>
+                <input type="checkbox" id="steak" value="topping">
+                <label for="steak">Steak</label>
+              </div>
+              <div id="veg">Vegetables: <br>
+                <input type="checkbox" id="mushrooms" value="topping">
+                <label for="mushrooms">mushrooms</label><br>
+                <input type="checkbox" id="capsicum"  value="topping">
+                <label for="capsicum">capsicum</label><br>
+                <input type="checkbox" id="corn" value="topping">
+                <label for="corn">sweet corn</label><br>
+              </div>
+            </div>
+            <br>
+            <select name="delivery" id="delivery" class="form-control">
+              <option value="" disabled selected hidden>pick-up/delivery:</option>
+              <option value="delivery">Delivery(150ksh)</option>
+              <option value="pickup">Pick-up</option>
+            </select>
+            <input type="submit" value="Checkout" class="btn btn-success">
+            <input type="reset" value="Clear cart" class="btn btn-success"><br> 
         </form>
-      </div>-->
+     </div>
     </div>
     <div id="three">
       <img src="assets/socials/facebook (1).png" alt="facebook" class="icon">

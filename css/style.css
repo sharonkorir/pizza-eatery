@@ -64,6 +64,25 @@ h2{
   font-family: 'Fredoka One', cursive;
   font-size: 60px;
 }
+.box-showing{
+  background-color:#bfaf5e; 
+  opacity: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  /*display: none;*/
+}
+.box-hidden{
+  display: none;
+}
+#toppings{
+  display: flex;
+  justify-content: space-evenly;
+}
+#meat, #veg{
+  text-align: start ;
+}
+
 @media screen and (max-width: 734px) {
   .logo {
     width: 25%;
