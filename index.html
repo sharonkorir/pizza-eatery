@@ -39,15 +39,15 @@
         <form id="myform"  onsubmit="submitForm(event)" >
             <select name="size" class="form-control"id="size">
               <option value="" disabled selected hidden>Choose a size:</option>
-              <option value="regular">regular(KES 500)</option>
-              <option value="medium">medium(KES 700)</option>
-              <option value="large">large(KES 1200)</option>
+              <option name="size" value="regular">regular(KES 500)</option>
+              <option name="size" value="medium">medium(KES 700)</option>
+              <option name="size" value="large">large(KES 1200)</option>
             </select>
             <br>
             <select name="crust" class="form-control"id="crust">
               <option value="" disabled selected hidden>Choose a crust:</option>
               <option value="thin">thin(KES 100)</option>
-              <option value="stuffed">stuffed (KES 150)</option>
+              <option value="stuffed">stuffed(KES 150)</option>
               <option value="glutten-free">glutten-free(KES 200)</option>
             </select>
             <br>
@@ -73,8 +73,8 @@
             <br>
             <select name="delivery" id="delivery" class="form-control">
               <option value="" disabled selected hidden>pick-up/delivery:</option>
-              <option value="delivery">Delivery(KES 150)</option>
-              <option value="pickup">Pick-up</option>
+              <option value="deliver" id="deliver" name="deliver">Delivery(KES 150)</option>
+              <option value="pickup" id="pickup" name="pick-up">Pick-up</option>
             </select>
             <input type="submit" value="Checkout" class="btn btn-success" id="checkout" onclick="submitForm(event)">
             <input type="reset" value="Clear cart" class="btn btn-success"><br> 
