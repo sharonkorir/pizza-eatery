@@ -121,7 +121,8 @@ function submitForm (event){
   console.log(toppingCost);
   console.log(topping.length);
   var deliveryCost = 150;
-  total = toppingCost+crustPrice+sizePrice+deliveryCost;
+  //why is this working
+  total = toppingCost + +crustPrice + +sizePrice + +deliveryCost;
   
   console.log(total);
 
@@ -134,11 +135,14 @@ function submitForm (event){
   console.log(delivery);
   if(deliver.selected){
     var location = prompt("Enter your address");
+    
     if(location == ""){
-      alert("Enter valid address")    
+       alert("Please enter your address")
     }else{
-      alert("Your order will be delvered to " + location);
+      alert("Your total order is KES " + total + ". Your order will be delvered to " + location);
     }
+  }else{
+    alert("Your total order is KES " + total + ". Pick your order.");  
   }
 
   //display order and cost
