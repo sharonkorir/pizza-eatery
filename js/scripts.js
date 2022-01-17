@@ -67,13 +67,63 @@ function submitForm (event){
   }
   
   //pizza size cost
-  var sizeCost = [500, 700, 1200]
-  var crustCost = [100, 150, 200]
+  // array for size
+  var sizeArray = [
+    {
+      size: "regular",
+      price: 500
+    },
+    {
+      size: "medium",
+      price: 700
+    },
+    {
+      size: "large",
+      price: 1200
+    },
+  ]
+  
+  var sizePrice = "";
+  sizeArray.forEach(function(object) {
+    if(object.size === size){
+      sizePrice = parseInt(object.price);
+    }
+  })
+  console.log(sizePrice);
+  //display price
+
+  //array for crust
+  var crustArray = [
+    {
+      crust: "thin",
+      price: 100
+    },
+    {
+      crust: "stuffed",
+      price: 150
+    },
+    {
+      crust: "glutten-free",
+      price: 200
+    },
+  ]
+  
+  console.log(crustArray)
+  var crustPrice = "";
+  sizeArray.forEach(function(object) {
+    if(object.crust === crust){
+      crustPrice = parseInt(object.price);
+    }
+  })
+  console.log(crustPrice)
+//topping
   var toppingCost = topping.length*50;
-  if(size == regular){
-    return sizeCost[0];
-  }
-  var total = sizeCost + crustCost + toppingCost;
+  console.log(toppingCost);
+  console.log(topping.length);
+  var deliveryCost = 150;
+  total = toppingCost+crustPrice+sizePrice+deliveryCost;
+  
+  console.log(total);
 
   
   var pizzaOrder = new Pizza(size, crust, topping, total);
@@ -85,13 +135,12 @@ function submitForm (event){
   if(deliver.selected){
     var location = prompt("Enter your address");
     if(location == ""){
-      alert("Enter valid address")
-    
+      alert("Enter valid address")    
     }else{
       alert("Your order will be delvered to " + location);
     }
   }
 
-  //alert cost
-  
+  //display order and cost
+
 }
