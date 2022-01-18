@@ -12,7 +12,7 @@ $(document).ready(function(){
     $(".box-showing").hide();
   });
   $("#checkout").click(function(){
-    $(".ordertotal").show()
+    $(".ordertotal").show();
     event.preventDefault();
   });
   //add pizza
@@ -22,6 +22,9 @@ $(document).ready(function(){
   $("#add-order").click(function(){
     $(".box-showing").show()
   });
+  //display price on page
+
+  //add order
 });
 
 //business logic
@@ -43,27 +46,27 @@ function submitForm (event){
   var bacon = document.getElementById("bacon")
   if(bacon.checked){
     console.log("bacon");
-    topping.push(bacon.value);
+    topping.push(" " +bacon.value);
   }
   var chicken = document.getElementById("chicken")
   if(chicken.checked){
-      topping.push(chicken.value);
+      topping.push(" " +chicken.value);
   }
   var steak = document.getElementById("steak")
   if(steak.checked){
-    topping.push(steak.value);
+    topping.push(" " +steak.value);
   }
   var mushrooms = document.getElementById("mushrooms")
   if(mushrooms.checked){
-    topping.push(mushrooms.value);
+    topping.push(" " +mushrooms.value);
   }
   var capsicum = document.getElementById("capsicum")
   if(capsicum.checked){
-    topping.push(capsicum.value);
+    topping.push(" " +capsicum.value);
   }
   var corn = document.getElementById("corn")
   if(corn.checked){
-    topping.push(corn.value);
+    topping.push(" " + corn.value);
   }
   
   //pizza size cost
@@ -89,9 +92,7 @@ function submitForm (event){
       sizePrice = parseInt(object.price);
     }
   })
-  console.log(sizePrice);
-  //display price
-
+  
   //array for crust
   var crustArray = [
     {
@@ -108,9 +109,8 @@ function submitForm (event){
     },
   ]
   
-  console.log(crustArray)
   var crustPrice = "";
-  sizeArray.forEach(function(object) {
+  crustArray.forEach(function(object) {
     if(object.crust === crust){
       crustPrice = parseInt(object.price);
     }
@@ -123,28 +123,51 @@ function submitForm (event){
   var deliveryCost = 150;
   //why is this working
   total = toppingCost + +crustPrice + +sizePrice + +deliveryCost;
-  
   console.log(total);
-
-  
   var pizzaOrder = new Pizza(size, crust, topping, total);
   console.log(pizzaOrder)
-
-  //delivery
+  // display cost on page
+ 	
+  $( "#userMessageSize" ).append( size );
+  $( "#sizePrice" ).append( sizePrice );
+  $( "#userMessageCrust" ).append( crust );
+  $( "#crustp" ).append( crustPrice);
+  $( "#userMessageToppings" ).append( topping );
+  $( "#toppingsp" ).append( toppingCost );
+  
   var delivery = document.getElementById("delivery").value;
   console.log(delivery);
-  if(deliver.selected){
-    var location = prompt("Enter your address");
-    
-    if(location == ""){
-       alert("Please enter your address")
-    }else{
-      alert("Your total order is KES " + total + ". Your order will be delvered to " + location);
-    }
+  if(delivery){
+  $( "#deliver" ).append( "delivery" );
+  $( "#deliverycost" ).append( deliveryCost );
+  $( "#userMessageTotal" ).append( total );
   }else{
-    alert("Your total order is KES " + total + ". Pick your order.");  
-  }
+    $( "#delivery" ).append( "pick-up" );
+    $( "#deliveryCost" ).append("0" );
+    $( "#userMessageTotal" ).append( total - deliveryCost );
+  } 
 
-  //display order and cost
+      
+      /*if(location == ""){
+        alert("Please enter your address")
+      }else{
+        alert("Your total order is KES " + total + ". Your order will be delvered to " + location);
+      }*/
+   
+ 
+  //delivery
+
+ 
+  /*function displayValues() {
+    document.getElementById("userMessageSize").hidden = false;
+    document.getElementById("userMessageSize").innerHTML = size + " " + sizePrice;
+    document.getElementById("userMessageCrust").hidden = false;
+    document.getElementById("userMessageCrust").innerHTML = crust + " " + crustPrice;
+    document.getElementById("userMessageTopping").hidden = false;
+    document.getElementById("userMessageTopping").innerHTML = topping + " " + toppingCost;
+    document.getElementById("userMessageTotal").hidden = false;
+    document.getElementById("userMessageTotal").innerHTML = "KES " + total;
+  
+  }*/
 
 }

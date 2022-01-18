@@ -77,8 +77,9 @@
               <option value="pickup" id="pickup" name="pick-up">Pick-up</option>
             </select>
             <input type="submit" value="Checkout" class="btn btn-success" id="checkout" onclick="submitForm(event)">
-            <input type="reset" value="Clear cart" class="btn btn-success"><br> 
-        </form>  
+            <input type="reset" value="Clear cart" class="btn btn-success" ><br> 
+        </form>
+        
      </div>
      <div class="ordertotal">
       <table class="table">
@@ -92,23 +93,28 @@
         <tbody>
           <tr>
             <td>Size</td>
-            <td></td>
-            <td></td>
+            <td id="userMessageSize"></td>
+            <td id="sizePrice"></td>
           </tr>
           <tr>
             <td>Crust</td>
-            <td></td>
-            <td></td>
+            <td id="userMessageCrust"></td>
+            <td id="crustp"></td>
           </tr>
           <tr>
             <td>Toppings</td>
-            <td></td>
-            <td></td>
+            <td id="userMessageToppings"></td>
+            <td id="toppingsp"></td>
+          </tr>
+          <tr>
+            <td>Delivery</td>
+            <td id="deliver"></td>
+            <td id="deliverycost"></td>
           </tr>
           <tr>
             <td>TOTAL</td>
             <td></td>
-            <td></td>
+            <td id="userMessageTotal"></td>
           </tr>
         </tbody>
       </table>
