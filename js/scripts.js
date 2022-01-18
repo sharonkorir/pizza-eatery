@@ -162,22 +162,23 @@ function submitForm (event){
   $( "#userMessageTotal" ).append( total );
   $( "#deliverycost" ).append( deliveryPrice );  
 
-}
-function placeOrder(event){
-  var delivery = document.getElementById("delivery").value;
-  console.log(delivery);
-  var deliveryCost = 150
 
-  if(delivery === deliver){
-    var location = prompt("Please enter your address:")
-    alert("Your total order is KES " + total + ". Your order will be delivered to " + location);
-  }else if(delivery ===  pickup){
-    alert("Please pick your order.");
-  }else{
-    prompt("Please enter you address");
-    alert("Your total order is KES " + total + ". Your order will be delivered to " + location);
+
+  function placeOrder(event){
+    if(delivery === "deliver"){
+      var location = prompt("Please enter your address:")
+      alert("Your total order is KES " + total + ". Your order will be delivered to " + location);
+    }else if(delivery ===  "pickup"){
+      alert("Please pick your order.");
+    }else{
+      prompt("Please enter you address");
+      alert("Your total order is KES " + total + ". Your order will be delivered to " + location);
+    }
   }
-} 
+  placeOrder(event);
+}
+
+
 //add items function
 
       
