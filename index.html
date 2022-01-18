@@ -71,10 +71,10 @@
               </div>
             </div>
             <br>
-            <select name="delivery" id="delivery" class="form-control">
+            <select name="selectdelivery" id="selectdelivery" class="form-control">
               <option value="" disabled selected hidden>pick-up/delivery:</option>
-              <option value="deliver" id="deliver" name="deliver">Delivery(KES 150)</option>
-              <option value="pickup" id="pickup" name="pick-up">Pick-up</option>
+              <option  name="delivery" value="deliver">Delivery(KES 150)</option>
+              <option name="delivery" value="pickup" >Pick-up</option>
             </select>
             <input type="submit" value="Checkout" class="btn btn-success" id="checkout" onclick="submitForm(event)">
             <input type="reset" value="Clear cart" class="btn btn-success" ><br> 
@@ -108,7 +108,7 @@
           </tr>
           <tr>
             <td>Delivery</td>
-            <td id="deliver"></td>
+            <td id="deliverychoice"></td>
             <td id="deliverycost"></td>
           </tr>
           <tr>
@@ -118,7 +118,7 @@
           </tr>
         </tbody>
       </table>
-        <input type="submit" value="+ Add items" class="btn btn-success" id="add-order">
+        <input type="submit" value="+ Add items" class="btn btn-success" id="add-order" onclick="addOrder(event)">
         <input type="submit" value="Place order" class="btn btn-success" id="place-order" onclick="placeOrder(event)">
      </div>
     </div>

@@ -39,9 +39,8 @@ function submitForm (event){
   }
   var size = document.getElementById("size").value;
   var crust = document.getElementById("crust").value;
-  //getValue();
+  console.log(size);
   //get toppings
-  //function getValue() {
   var topping = []
   var bacon = document.getElementById("bacon")
   if(bacon.checked){
@@ -120,9 +119,34 @@ function submitForm (event){
   var toppingCost = topping.length*50;
   console.log(toppingCost);
   console.log(topping.length);
-  var deliveryCost = 150;
-  //why is this working
-  total = toppingCost + +crustPrice + +sizePrice + +deliveryCost;
+
+  //array for delivery cost
+  var delivery = document.getElementById("selectdelivery").value;
+  console.log(delivery);
+  var deliveryArray = [
+    {
+      option: "deliver",
+      price: 150
+    },
+    {
+      option: "pickup",
+      price: 0
+    },
+    {
+      option: "",
+      price: 0
+    },
+  ]
+  
+  var deliveryPrice = "";
+  deliveryArray.forEach(function(object) {
+    if(object.option === delivery){
+      deliveryPrice = parseInt(object.price);
+    }
+  })
+  console.log(deliveryPrice)
+  //get pizza order
+  total = toppingCost + +crustPrice + +sizePrice + +deliveryPrice;
   console.log(total);
   var pizzaOrder = new Pizza(size, crust, topping, total);
   console.log(pizzaOrder)
@@ -134,30 +158,28 @@ function submitForm (event){
   $( "#crustp" ).append( crustPrice);
   $( "#userMessageToppings" ).append( topping );
   $( "#toppingsp" ).append( toppingCost );
-  
-  var delivery = document.getElementById("delivery").value;
-  console.log(delivery);
-  if(delivery){
-  $( "#deliver" ).append( "delivery" );
-  $( "#deliverycost" ).append( deliveryCost );
+  $( "#deliverychoice" ).append( delivery );
   $( "#userMessageTotal" ).append( total );
-  }else{
-    $( "#delivery" ).append( "pick-up" );
-    $( "#deliveryCost" ).append( 0 );
-    $( "#userMessageTotal" ).append( total - deliveryCost );
-  } 
+  $( "#deliverycost" ).append( deliveryPrice );  
+
 }
 function placeOrder(event){
   var delivery = document.getElementById("delivery").value;
   console.log(delivery);
   var deliveryCost = 150
-  if(delivery == delivery){
+
+  if(delivery === deliver){
     var location = prompt("Please enter your address:")
     alert("Your total order is KES " + total + ". Your order will be delivered to " + location);
-  }else{
+  }else if(delivery ===  pickup){
     alert("Please pick your order.");
+  }else{
+    prompt("Please enter you address");
+    alert("Your total order is KES " + total + ". Your order will be delivered to " + location);
   }
 } 
+//add items function
+
       
 
   
