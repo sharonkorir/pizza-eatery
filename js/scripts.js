@@ -151,7 +151,7 @@ function placeOrder(event){
   var delivery = document.getElementById("delivery").value;
   console.log(delivery);
   var deliveryCost = 150
-  if(delivery == deliver){
+  if(delivery == delivery){
     var location = prompt("Please enter your address:")
     alert("Your total order is KES " + total + ". Your order will be delivered to " + location);
   }else{
