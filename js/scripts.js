@@ -143,31 +143,20 @@ function submitForm (event){
   $( "#userMessageTotal" ).append( total );
   }else{
     $( "#delivery" ).append( "pick-up" );
-    $( "#deliveryCost" ).append("0" );
+    $( "#deliveryCost" ).append( 0 );
     $( "#userMessageTotal" ).append( total - deliveryCost );
   } 
-
-      
-      /*if(location == ""){
-        alert("Please enter your address")
-      }else{
-        alert("Your total order is KES " + total + ". Your order will be delvered to " + location);
-      }*/
-   
- 
-  //delivery
-
- 
-  /*function displayValues() {
-    document.getElementById("userMessageSize").hidden = false;
-    document.getElementById("userMessageSize").innerHTML = size + " " + sizePrice;
-    document.getElementById("userMessageCrust").hidden = false;
-    document.getElementById("userMessageCrust").innerHTML = crust + " " + crustPrice;
-    document.getElementById("userMessageTopping").hidden = false;
-    document.getElementById("userMessageTopping").innerHTML = topping + " " + toppingCost;
-    document.getElementById("userMessageTotal").hidden = false;
-    document.getElementById("userMessageTotal").innerHTML = "KES " + total;
-  
-  }*/
-
 }
+function placeOrder(event){
+  var delivery = document.getElementById("delivery").value;
+  var deliveryCost = 150
+  if(delivery){
+    var location = prompt("Please enter your address:")
+    alert("Your total order is KES " + total + ". Your order will be delivered to " + location);
+  }else{
+    alert("Please pick your order.");
+  }
+} 
+      
+
+  
